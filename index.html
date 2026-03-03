@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TIPOS DE MENUS EN CSS</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    background-color: #2e86c1;
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+/* ================= MENU DESPLEGABLE ================= */
+
+.menu-desplegable{
+    width: 200px;
+    margin: 30px;
+}
+
+.menu-desplegable ul{
+    list-style: none;
+    padding: 0;
+}
+
+.menu-desplegable li{
+    position: relative;
+}
+
+.menu-desplegable a{
+    display: block;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-desplegable a:hover{
+    background-color: #21618c;
+}
+
+/* Submenú */
+.menu-desplegable ul ul{
+    display: none;
+}
+
+.menu-desplegable li:hover > ul{
+    display: block;
+}
+
+/* ================= MENU HORIZONTAL ================= */
+
+.menu-horizontal{
+    background-color: #333;
+    margin-top: 40px;
+}
+
+.menu-horizontal ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-horizontal li{
+    flex: 1;
+}
+
+.menu-horizontal a{
+    display: block;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-horizontal a:hover{
+    background-color: #555;
+}
+</style>
+</head>
+
+<body>
+
+<h1>TIPOS DE MENUS EN CSS</h1>
+
+<h2 style="margin-left:30px;">Menú Desplegable</h2>
+
+<nav class="menu-desplegable">
+    <ul>
+        <li><a href="#">Inicio</a></li>
+        <li>
+            <a href="#">Servicios</a>
+            <ul>
+                <li><a href="#">Diseño Web</a></li>
+                <li><a href="#">Programación</a></li>
+                <li><a href="#">Marketing</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Contacto</a></li>
+    </ul>
+</nav>
+
+<h2 style="margin-left:30px;">Menú Horizontal</h2>
+
+<nav class="menu-horizontal">
+    <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>

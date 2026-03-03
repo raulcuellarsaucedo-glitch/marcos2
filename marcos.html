@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marco con Tres Secciones Verticales</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+.contenedor{
+    display: flex;
+    height: 100vh;
+}
+
+/* Columnas */
+.seccion{
+    flex: 1;
+    border-right: 3px solid black;
+    overflow: auto;
+    resize: horizontal;
+    min-width: 200px;
+}
+
+/* Quitar borde a la última */
+.seccion:last-child{
+    border-right: none;
+}
+
+/* Estilo izquierda */
+.izquierda{
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* Iframes */
+iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+    .contenedor{
+        flex-direction: column;
+    }
+
+    .seccion{
+        height: 33.3%;
+        resize: vertical;
+        border-right: none;
+        border-bottom: 3px solid black;
+    }
+
+    .seccion:last-child{
+        border-bottom: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <!-- IZQUIERDA -->
+    <div class="seccion izquierda">
+        <h2>Preguntas y Respuestas</h2>
+
+        <p><strong>¿Cuál es la estructura básica de las tablas?</strong><br>
+        Se compone de &lt;table&gt;, &lt;tr&gt;, &lt;td&gt; y &lt;th&gt;.</p>
+
+        <p><strong>¿Cuál es la estructura básica de los formularios?</strong><br>
+        Se usa &lt;form&gt; con &lt;input&gt;, &lt;label&gt;, &lt;textarea&gt; y &lt;button&gt;.</p>
+
+        <p><strong>¿Cuál es la estructura básica de los marcos?</strong><br>
+        Actualmente se usa &lt;iframe&gt;.</p>
+
+        <p><strong>¿Qué significa DHTML?</strong><br>
+        Significa Dynamic HTML.</p>
+
+        <p><strong>¿Qué es un sitio Web?</strong><br>
+        Es un conjunto de páginas web alojadas en un servidor.</p>
+
+        <p><strong>¿Cómo se crea un marco?</strong><br>
+        Con la etiqueta &lt;iframe&gt;.</p>
+
+        <p><strong>¿Para qué se utilizan los temas?</strong><br>
+        Para definir el diseño visual del sitio.</p>
+
+        <p><strong>¿Cómo se crea un sitio web?</strong><br>
+        Creando archivos HTML, aplicando CSS y subiéndolos a un servidor.</p>
+    </div>
+
+    <!-- CENTRO (EXTERNA) -->
+    <div class="seccion">
+        <iframe src="https://www.wikipedia.org"></iframe>
+    </div>
+
+    <!-- DERECHA (INTERNA) -->
+    <div class="seccion">
+        <iframe src="index.html"></iframe>
+    </div>
+
+</div>
+
+</body>
+</html>
